@@ -76,7 +76,7 @@ function App() {
             title: 'SADDA PRTC',
             accent: 'Smart Transit Prototype',
             meta: 'Node.js | Express | MongoDB | React Native | Expo',
-            bgColor: '#2457FF',
+            bgColor: 'rgba(36, 87, 255, 1)',
             textColor: '#FFFFFF',
             description:
                 'A real-time bus tracking and transit management prototype inspired by Namma BMTC with geospatial route handling and live vehicle updates.',
@@ -84,21 +84,23 @@ function App() {
                 'Built RESTful APIs for live vehicle tracking, route management, and fare calculation.',
                 'Developed a multilingual React Native client with adaptive polling for real-time updates.',
                 'Integrated rate limiting, environment configuration, and Socket.IO scaffolding.'
-            ]
+            ],
+            url: 'https://github.com/Devaditya-Suuu/sadda_prtc'
         },
         {
             title: 'ResearchGate Club Website',
             accent: 'Club platform',
             meta: 'Next.js | MongoDB | Tailwind CSS | Clerk | Framer Motion',
-            bgColor: '#F59E0B',
-            textColor: '#111111',
+            bgColor: 'rgba(245, 158, 11, 1)',
+            textColor: '#ffff',
             description:
                 'A modern college research club site with secure authentication, role-based access, and expressive motion-led UI.',
             bullets: [
                 'Implemented Clerk-based authentication for members and administrators.',
                 'Designed data models for users, events, publications, and merchandise.',
                 'Enhanced the experience with Framer Motion, GSAP, and a responsive dark UI.'
-            ]
+            ],
+            url: 'https://www.sitresearchgate.in/'
         },
         {
             title: 'DocReader',
@@ -112,7 +114,8 @@ function App() {
                 'Integrated Tesseract OCR and NLTK for text extraction and keyword-based summarization.',
                 'Added real-time upload feedback and word-level confidence analysis.',
                 'Containerized the full stack with Docker for single deployment flow.'
-            ]
+            ],
+            url: 'https://ocr-project-vuqj.onrender.com/'
         }
     ]
 
@@ -234,12 +237,12 @@ function App() {
                         {/* <SpotlightCard className="custom-spotlight-card h-[28vh]" spotlightColor="rgba(0, 229, 255, 0.2)">
                             
                         </SpotlightCard> */}
-                        <PixelCard variant="pink" onMouseOver={handleHover}><p className='absolute text-2xl'>{text}</p></PixelCard>
+                        {/* <PixelCard variant="pink" onMouseOver={handleHover} className='sm:hidden md:block'><p className='absolute text-2xl'>{text}</p></PixelCard> */}
                     </div>
                 </div>
             </section>
 
-            <section id="skills" className="relative mt-[-20em] mx-auto w-full max-w-7xl px-5 py-32 md:px-8 lg:px-10 lg:py-36">
+            <section id="skills" className="relative mt-[-10em] mx-auto w-full max-w-7xl px-5 py-32 md:px-8 lg:px-10 lg:py-36">
                 <div className="mb-10 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
                     <div>
                         <p className="text-xs uppercase tracking-[0.28em] text-white/40">Skills</p>
@@ -336,8 +339,8 @@ function App() {
                     baseScale={0.9}
                 >
                     {projects.map(project => (
-                        <ScrollStackItem key={project.title} itemClassName="overflow-hidden border border-white/10 !h-[34rem] md:!h-[36rem]">
-                            <div className="flex h-full flex-col justify-between rounded-4xl p-0" style={{ backgroundColor: project.bgColor, color: project.textColor }}>
+                        <ScrollStackItem key={project.title} itemClassName="overflow-hidden border border-white/10 !h-[44rem] md:!h-[36rem]">
+                            <div className="flex h-full flex-col justify-between rounded-4xl p-0" style={{ backgroundColor: project.bgColor, color: project.textColor, backdropFilter: "blur(10px)", WebkitBackdropFilter: "blur(10px)" }}>
                                 <div className="flex items-start justify-between gap-4 p-7 md:p-10">
                                     <div className="max-w-2xl">
                                         <p className="text-xs uppercase tracking-[0.28em] opacity-70">{project.accent}</p>
@@ -360,7 +363,9 @@ function App() {
                                     </ul>
                                     <div className="flex flex-col justify-between gap-4 md:items-end md:text-right">
                                         <span className="uppercase tracking-[0.24em] opacity-70">{project.meta}</span>
-                                        <span className="inline-flex items-center gap-2 self-start rounded-full bg-white/15 px-4 py-2 text-xs font-medium uppercase tracking-[0.2em] md:self-end">
+                                        <span className="inline-flex items-center gap-2 self-start rounded-full bg-white/15 px-4 py-2 text-xs font-medium uppercase tracking-[0.2em] md:self-end" onClick={()=>{
+                                            window.open( project.url, "_blank")
+                                        }} style={{cursor: "pointer"}}>
                                             Case study
                                             <span aria-hidden="true">↗</span>
                                         </span>
