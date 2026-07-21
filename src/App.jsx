@@ -131,12 +131,12 @@ function App() {
         setText("Kidding Nothing Here")
     }
 
-    const demoItems = [
-        { link: '#', text: 'Mojave', image: 'https://picsum.photos/600/400?random=1'},
-        { link: '#', text: 'Sonoma', image: 'https://picsum.photos/600/400?random=2' },
-        { link: '#', text: 'Monterey', image: 'https://picsum.photos/600/400?random=3' },
-        { link: '#', text: 'Sequoia', image: 'https://picsum.photos/600/400?random=4' }
-    ];
+    // const demoItems = [
+    //     { link: '#', text: 'Mojave', image: 'https://picsum.photos/600/400?random=1'},
+    //     { link: '#', text: 'Sonoma', image: 'https://picsum.photos/600/400?random=2' },
+    //     { link: '#', text: 'Monterey', image: 'https://picsum.photos/600/400?random=3' },
+    //     { link: '#', text: 'Sequoia', image: 'https://picsum.photos/600/400?random=4' }
+    // ];
     return (
         <main className="relative z-10 min-h-screen overflow-hidden text-white">
             <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(154,106,255,0.18),transparent_35%),radial-gradient(circle_at_bottom,rgba(37,99,235,0.14),transparent_30%)]" />
@@ -248,9 +248,9 @@ function App() {
                         <p className="text-xs uppercase tracking-[0.28em] text-white/40">Skills</p>
                         <h2 className="mt-3 text-3xl font-semibold tracking-tighter sm:text-4xl">Technical skills</h2>
                     </div>
-                    <p className="max-w-sm text-sm leading-6 text-white/55 md:text-right">
+                    {/* <p className="max-w-sm text-sm leading-6 text-white/55 md:text-right">
                         Focused on the stack from your resume: languages, frontend, MERN, and core CS fundamentals.
-                    </p>
+                    </p> */}
                 </div>
 
                 {/* items-stretch (implicit via grid) so every card is the same
@@ -324,9 +324,9 @@ function App() {
                         <p className="text-xs uppercase tracking-[0.28em] text-white/40">Projects</p>
                         <h2 className="mt-3 text-3xl font-semibold tracking-tighter sm:text-4xl">Featured projects</h2>
                     </div>
-                    <p className="max-w-sm text-sm leading-6 text-white/55 md:text-right">
+                    {/* <p className="max-w-sm text-sm leading-6 text-white/55 md:text-right">
                         A scroll stack works well here because each project can read like a case-study card.
-                    </p>
+                    </p> */}
                 </div>
 
                 <ScrollStack
