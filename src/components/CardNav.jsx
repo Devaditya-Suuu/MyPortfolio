@@ -187,7 +187,7 @@ const CardNav = ({
 
           <button
             type="button"
-            className="card-nav-cta-button hidden md:inline-flex border border-white/10 rounded-[0.85rem] px-5 items-center h-11.5 font-medium cursor-pointer transition-colors duration-300 shadow-lg"
+            className="card-nav-cta-button inline-flex border border-white/10 rounded-[0.85rem] px-5 items-center h-11.5 font-medium cursor-pointer transition-colors duration-300 shadow-lg"
             style={{ backgroundColor: buttonBgColor, color: buttonTextColor }}
             onClick={handleResumeView}
           >

@@ -248,9 +248,6 @@ function App() {
                         <p className="text-xs uppercase tracking-[0.28em] text-white/40">Skills</p>
                         <h2 className="mt-3 text-3xl font-semibold tracking-tighter sm:text-4xl">Technical skills</h2>
                     </div>
-                    {/* <p className="max-w-sm text-sm leading-6 text-white/55 md:text-right">
-                        Focused on the stack from your resume: languages, frontend, MERN, and core CS fundamentals.
-                    </p> */}
                 </div>
 
                 {/* items-stretch (implicit via grid) so every card is the same
@@ -258,7 +255,7 @@ function App() {
                 <div className="grid items-stretch gap-5 md:grid-cols-2 xl:grid-cols-4">
                     {skillGroups.map(group => (
                         <article key={group.title} className="flex flex-col rounded-4xl border border-white/10 bg-white/5 p-6 shadow-[0_20px_40px_rgba(0,0,0,0.16)] backdrop-blur-xl">
-                            <p className="text-xs uppercase tracking-[0.24em] text-white/40">{group.accent}</p>
+                            {/* <p className="text-xs uppercase tracking-[0.24em] text-white/40">{group.accent}</p> */}
                             <h3 className="mt-3 text-2xl font-semibold tracking-tighter">{group.title}</h3>
                             <div className="mt-5 flex flex-wrap gap-2.5">
                                 {group.items.map(item => (
