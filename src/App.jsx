@@ -55,7 +55,7 @@ function App() {
         {
             title: 'Tech Stack',
             accent: 'Full stack',
-            items: ['MongoDB', 'Express', 'React', 'Node.js', 'MERN Stack']
+            items: ['MongoDB', 'Express', 'React', 'Node.js', 'MERN Stack', 'PostGres']
         },
         {
             title: 'Core CS',
@@ -237,7 +237,7 @@ function App() {
                         {/* <SpotlightCard className="custom-spotlight-card h-[28vh]" spotlightColor="rgba(0, 229, 255, 0.2)">
                             
                         </SpotlightCard> */}
-                        {/* <PixelCard variant="pink" onMouseOver={handleHover} className='sm:hidden md:block'><p className='absolute text-2xl'>{text}</p></PixelCard> */}
+                        {/* <PixelCard variant="pink" onMouseOver={handleHover} className='sm:hidden md:block w-[100%]'><p className='absolute text-2xl'>{text}</p></PixelCard> */}
                     </div>
                 </div>
             </section>

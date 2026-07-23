@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 class Pixel {
   constructor(canvas, context, x, y, color, speed, delay) {
@@ -223,6 +223,11 @@ export default function PixelCard({ variant = 'default', gap, speed, colors, noF
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [finalGap, finalSpeed, finalColors, finalNoFocus]);
 
+  const [text, setText] = useState("")
+
+  const handleClick = () =>{
+    setText("I hove you are enjoying")
+  }
   return (
     <div
       ref={containerRef}
@@ -232,9 +237,12 @@ export default function PixelCard({ variant = 'default', gap, speed, colors, noF
       onFocus={finalNoFocus ? undefined : onFocus}
       onBlur={finalNoFocus ? undefined : onBlur}
       tabIndex={finalNoFocus ? -1 : 0}
+      onClick={handleClick}
     >
       <canvas className="w-full h-full block" ref={canvasRef} />
       {children}
+      <div>{text}</div>
     </div>
+
   );
 }

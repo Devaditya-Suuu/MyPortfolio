@@ -137,8 +137,14 @@ const CardNav = ({
   };
 
 
-  const handleResumeView = () =>{
-    window.open("../../public/resume.pdf", "_blank")
+  const handleResumeView = () => {
+    // window.open("./resume.pdf", "_blank")
+    const link = document.createElement("a");
+    link.href = "/resume.pdf";
+    link.download = "Devaditya_Borah_Resume.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   }
 
   return (
@@ -170,14 +176,12 @@ const CardNav = ({
             style={{ color: menuColor || '#fff' }}
           >
             <div
-              className={`hamburger-line h-0.5 w-7.5 bg-current transition-[transform,opacity,margin] duration-300 ease-linear origin-[50%_50%] ${
-                isHamburgerOpen ? 'translate-y-1 rotate-45' : ''
-              } group-hover:opacity-75`}
+              className={`hamburger-line h-0.5 w-7.5 bg-current transition-[transform,opacity,margin] duration-300 ease-linear origin-[50%_50%] ${isHamburgerOpen ? 'translate-y-1 rotate-45' : ''
+                } group-hover:opacity-75`}
             />
             <div
-              className={`hamburger-line h-0.5 w-7.5 bg-current transition-[transform,opacity,margin] duration-300 ease-linear origin-[50%_50%] ${
-                isHamburgerOpen ? '-translate-y-1 -rotate-45' : ''
-              } group-hover:opacity-75`}
+              className={`hamburger-line h-0.5 w-7.5 bg-current transition-[transform,opacity,margin] duration-300 ease-linear origin-[50%_50%] ${isHamburgerOpen ? '-translate-y-1 -rotate-45' : ''
+                } group-hover:opacity-75`}
             />
           </div>
 
@@ -196,9 +200,8 @@ const CardNav = ({
         </div>
 
         <div
-          className={`card-nav-content absolute left-0 right-0 top-[64px] bottom-0 p-3 md:p-4 grid gap-3 md:grid-cols-3 z-1 ${
-            isExpanded ? 'visible pointer-events-auto' : 'invisible pointer-events-none'
-          }`}
+          className={`card-nav-content absolute left-0 right-0 top-[64px] bottom-0 p-3 md:p-4 grid gap-3 md:grid-cols-3 z-1 ${isExpanded ? 'visible pointer-events-auto' : 'invisible pointer-events-none'
+            }`}
           aria-hidden={!isExpanded}
         >
           {(items || []).slice(0, 3).map((item, idx) => (
