@@ -23,7 +23,7 @@ const Background = () => {
                 particleBaseSize={70}
                 moveParticlesOnHover
                 alphaParticles={false}
-                disableRotation={true}
+                disableRotation={false}
                 pixelRatio="1"
             />
         </div>
